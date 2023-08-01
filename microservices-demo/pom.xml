@@ -24,6 +24,8 @@
 		<java.version>17</java.version>
 		<pring-boot.version>3.1.2</pring-boot.version>
 		<maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+		<twitter4j.version>4.0.7</twitter4j.version>
+		<lombok.version>1.18.28</lombok.version>
 	</properties>
 
 	<dependencyManagement>
@@ -38,6 +40,18 @@
 				<artifactId>spring-boot-starter-test</artifactId>
 				<version>${pring-boot.version}</version>
 				<scope>test</scope>
+			</dependency>
+			<!--
+			https://mvnrepository.com/artifact/org.twitter4j/twitter4j -->
+			<dependency>
+				<groupId>org.twitter4j</groupId>
+				<artifactId>twitter4j-stream</artifactId>
+				<version>${twitter4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -62,4 +76,7 @@
 		</pluginManagement>
 	</build>
 
+	<modules>
+		<module>twitter-to-kafka-service</module>
+	</modules>
 </project>

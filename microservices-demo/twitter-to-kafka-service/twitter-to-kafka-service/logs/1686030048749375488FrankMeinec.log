@@ -1,0 +1,23 @@
+2023-08-01 10:01:14 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20 with PID 15724 (C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service\target\classes started by frank in C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service)
+2023-08-01 10:01:14 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-01 10:01:15 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.99 seconds (process running for 1.581)
+2023-08-01 10:01:15 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts ...
+2023-08-01 10:01:15 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-01 10:01:15 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello Microservices!
+2023-08-01 10:01:15 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2023-08-01 10:01:15 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-01 10:01:15 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Calling SLEEP 4 Seconds ...
+2023-08-01 10:01:15 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - https://stream.twitter.com/1.1/statuses/filter.json
+2023-08-01 10:01:15 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 250 milliseconds
+2023-08-01 10:01:16 [Twitter Stream consumer /  [1][Waiting for 250 milliseconds]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2023-08-01 10:01:16 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - https://stream.twitter.com/1.1/statuses/filter.json
+2023-08-01 10:01:16 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 500 milliseconds
+2023-08-01 10:01:16 [Twitter Stream consumer /  [1][Waiting for 500 milliseconds]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2023-08-01 10:01:16 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - https://stream.twitter.com/1.1/statuses/filter.json
+2023-08-01 10:01:16 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 1000 milliseconds
+2023-08-01 10:01:17 [Twitter Stream consumer /  [1][Waiting for 1000 milliseconds]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2023-08-01 10:01:18 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - https://stream.twitter.com/1.1/statuses/filter.json
+2023-08-01 10:01:18 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Waiting for 2000 milliseconds
+2023-08-01 10:01:19 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Calling SHUTDOWN after sleep ...
+2023-08-01 10:01:19 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing twitter stream!
+2023-08-01 10:01:20 [SpringApplicationShutdownHook] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing twitter stream!
