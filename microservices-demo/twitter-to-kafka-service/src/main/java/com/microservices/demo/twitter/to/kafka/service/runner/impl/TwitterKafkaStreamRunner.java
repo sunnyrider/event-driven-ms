@@ -38,7 +38,7 @@ public class TwitterKafkaStreamRunner implements StreamRunner {
 		addFilter();
 		try {
 			LOGGER.info("Calling SLEEP 4 Seconds ...");
-			Thread.sleep(4000);
+			Thread.sleep(30000);
 			LOGGER.info("Calling SHUTDOWN after sleep ...");
 			shutdown();
 		} catch (InterruptedException e) {
