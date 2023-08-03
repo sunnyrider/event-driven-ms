@@ -1,4 +1,4 @@
-package com.microservices.demo.twitter.to.kafka.service.conf;
+package com.microservices.demo.twitter.to.kafka.service.config;
 
 import java.util.List;
 
@@ -14,4 +14,8 @@ public class TwitterToKafkaServiceConfigData {
 
 	private List<String> twitterKeywords;
 	private String welcomeMessage;
+//	private String enableV2Tweets;
+	private String twitterV2BaseUrl;
+	private String twitterV2RulesBaseUrl;
+	private String twitterV2BearerToken;
 }

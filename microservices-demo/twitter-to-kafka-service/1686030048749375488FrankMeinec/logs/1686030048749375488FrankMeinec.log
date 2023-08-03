@@ -33,3 +33,452 @@
 2023-08-02 13:12:27 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing twitter stream!
 2023-08-02 13:12:28 [SpringApplicationShutdownHook] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing twitter stream!
 2023-08-02 13:14:27 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplicationTests]: TwitterToKafkaServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-08-02 17:26:49 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20 with PID 15704 (C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service\target\classes started by frank in C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service)
+2023-08-02 17:26:49 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-02 17:26:49 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.035 seconds (process running for 1.615)
+2023-08-02 17:26:49 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts ...
+2023-08-02 17:26:49 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 17:26:49 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello Microservices!
+2023-08-02 17:26:49 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 17:26:50 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-08-02 17:26:50 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-02 17:26:50 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 3 [character 4 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:497)
+	at org.json.JSONObject.<init>(JSONObject.java:208)
+	at org.json.JSONObject.<init>(JSONObject.java:404)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.getFormattedTweet(TwitterV2StreamHelper.java:224)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:89)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2023-08-02 17:31:47 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20 with PID 19520 (C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service\target\classes started by frank in C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service)
+2023-08-02 17:31:47 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-02 17:31:48 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.316 seconds (process running for 2.331)
+2023-08-02 17:31:48 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts ...
+2023-08-02 17:31:48 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 17:31:48 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello Microservices!
+2023-08-02 17:31:48 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 17:31:49 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-08-02 17:31:49 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-02 17:31:49 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 3 [character 4 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:497)
+	at org.json.JSONObject.<init>(JSONObject.java:208)
+	at org.json.JSONObject.<init>(JSONObject.java:404)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.getFormattedTweet(TwitterV2StreamHelper.java:224)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:89)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2023-08-02 17:33:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20 with PID 20236 (C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service\target\classes started by frank in C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service)
+2023-08-02 17:33:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-02 17:33:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.251 seconds (process running for 2.201)
+2023-08-02 17:33:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts ...
+2023-08-02 17:33:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 17:33:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello Microservices!
+2023-08-02 17:33:31 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 17:33:32 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-08-02 17:36:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20 with PID 19696 (C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service\target\classes started by frank in C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service)
+2023-08-02 17:36:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-02 17:36:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.29 seconds (process running for 2.211)
+2023-08-02 17:36:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts ...
+2023-08-02 17:36:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 17:36:31 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello Microservices!
+2023-08-02 17:36:31 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 17:36:32 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-08-02 17:41:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20 with PID 25032 (C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service\target\classes started by frank in C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service)
+2023-08-02 17:41:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-02 17:41:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.057 seconds (process running for 1.658)
+2023-08-02 17:41:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts ...
+2023-08-02 17:41:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 17:41:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello Microservices!
+2023-08-02 17:41:50 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 17:41:51 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-08-02 17:41:51 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 17:41:51 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 17:41:51 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 17:41:51 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 17:41:51 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 17:41:51 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-02 17:41:52 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.lang.NullPointerException: Cannot invoke "String.isEmpty()" because "line" is null
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:89)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2023-08-02 22:24:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20 with PID 8788 (C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service\target\classes started by frank in C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service)
+2023-08-02 22:24:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-02 22:24:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.093 seconds (process running for 1.703)
+2023-08-02 22:24:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts ...
+2023-08-02 22:24:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 22:24:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello Microservices!
+2023-08-02 22:24:40 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 22:24:42 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-08-02 22:24:42 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 22:24:42 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 22:24:42 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 22:24:42 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 22:24:42 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 22:24:42 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-02 22:24:42 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.lang.NullPointerException: Cannot invoke "String.isEmpty()" because "line" is null
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:89)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2023-08-02 22:26:57 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20 with PID 9132 (C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service\target\classes started by frank in C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service)
+2023-08-02 22:26:57 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-02 22:26:58 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.2 seconds (process running for 2.129)
+2023-08-02 22:26:58 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts ...
+2023-08-02 22:26:58 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 22:26:58 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello Microservices!
+2023-08-02 22:28:02 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 22:39:09 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20 with PID 19124 (C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service\target\classes started by frank in C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service)
+2023-08-02 22:39:09 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-02 22:39:09 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.042 seconds (process running for 1.64)
+2023-08-02 22:39:09 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts ...
+2023-08-02 22:39:09 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 22:39:09 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello Microservices!
+2023-08-02 22:39:09 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 22:39:10 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-08-02 22:39:11 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 22:39:11 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 22:39:11 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 22:39:11 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 22:39:11 [main] ERROR c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Could not create status for text: 
+twitter4j.TwitterException: End of input at character 0 of 
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:57)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:98)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: twitter4j.JSONException: End of input at character 0 of 
+	at twitter4j.JSONTokener.syntaxError(JSONTokener.java:486)
+	at twitter4j.JSONTokener.nextValue(JSONTokener.java:127)
+	at twitter4j.JSONObject.<init>(JSONObject.java:167)
+	at twitter4j.JSONObject.<init>(JSONObject.java:184)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:55)
+	... 9 common frames omitted
+2023-08-02 22:39:11 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-02 22:39:11 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.lang.NullPointerException: Cannot invoke "String.isEmpty()" because "line" is null
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:89)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:39)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2023-08-02 22:47:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20 with PID 10408 (C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service\target\classes started by frank in C:\udemy\Event-Driven-Microservices_SpringBoot-Kafka_Elastic\ws01\event-driven-ms\microservices-demo\twitter-to-kafka-service)
+2023-08-02 22:47:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-02 22:47:03 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.225 seconds (process running for 2.153)
+2023-08-02 22:47:03 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App starts ...
+2023-08-02 22:47:03 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 22:47:03 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello Microservices!
+2023-08-02 22:47:23 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-08-02 22:48:17 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java

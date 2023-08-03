@@ -8,10 +8,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.microservices.demo.twitter.to.kafka.service.conf.TwitterToKafkaServiceConfigData;
+import com.microservices.demo.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
 import com.microservices.demo.twitter.to.kafka.service.runner.StreamRunner;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class TwitterToKafkaServiceApplication implements CommandLineRunner {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(TwitterToKafkaServiceApplication.class);
